@@ -70,6 +70,10 @@
         }
         .contact p{
             text-align: center;
+        
+        }
+        .contact h2{
+            text-align: center;
         }
         .location{
             background-color:#244c58
@@ -86,22 +90,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#who-we-are">Who We Are</a></li>
-            <li class="nav-item"><a class="nav-link" href="#core-values">Core Values</a></li>
+            <li class="nav-item"><a class="nav-link" href="#who-we-are">What We Do</a></li>
             <li class="nav-item"><a class="nav-link" href="#who-we-treat">Who We Treat</a></li>
             <li class="nav-item"><a class="nav-link" href="#how-we-treat">How We Treat</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#accreditations">Accreditations</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<div class="hero text-center slide-in-left">
-    <div class="container">
-        <img src="images/The Reprieve Logo Pack FINAL_STACKED V1 WHITE TRANSPARENT.png" alt="The Reprieve Logo" class="mb-4">
-        <h1 class="display-4">Behavioral Healthcare Services</h1>
+<div class="hero text-center slide-in-left" style="position: relative; background-image: url('images/dope_flowers.jpg'); background-size: cover;">
+    <div class="container" style="position: relative; z-index: 2;"> <!-- Ensures logo appears in front -->
+        <img src="images/The Reprieve Logo Pack FINAL_STACKED V1 WHITE TRANSPARENT.png" alt="The Reprieve Logo" class="mb-4" style="position: relative; z-index: 2;">
+        <h1 class="display-4" style="position: relative; z-index: 2;">Behavioral Healthcare Services</h1>
     </div>
+    <!-- Optional: Add an overlay for better contrast with the logo -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
 </div>
 
 <!-- Definition Section -->
@@ -114,55 +118,64 @@
 
 <!-- Who We Are -->
 <div id="who-we-are" class="container slide-in-right">
-    <h2>Who We Are</h2>
+    <h2>What We Do</h2>
     <p>The Reprieve is a behavioral healthcare services company whose primary purpose is to strengthen individual recovery capital. Our behavioral healthcare services are designed to help individuals close the gap between pursuit and achievement of better health.</p>
     <p>We are intentional in our approach to program development, service delivery and community engagement. Our person-centered care combines evidence-based clinical and peer support interventions to treat the disease of addiction with intervention strategies aimed at reducing health disparities uniquely experienced by individuals with addictive disorders.</p>
     <p>The Reprieve builds and maintains a network of provider and community partners that, collectively, address the social determinants that often impede sustained recovery and threaten the overall health of the local population. We actively participate in a recovery-oriented system of care to benefit the individuals we treat and the communities we serve.</p>
 </div>
 
 <!-- Core Values -->
-<div id="core-values" class="core-values bg-light">
-    <div class="container slide-in-left">
-        <h2>Core Values</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <h4>Excellence</h4>
-                <p>We are relentless in pursuit of excellence in all we do.</p>
-            </div>
-            <div class="col-md-3">
-                <h4>Innovation</h4>
-                <p>Unafraid to challenge the paradigm, we seek new ways to solve old problems.</p>
-            </div>
-            <div class="col-md-3">
-                <h4>Collaboration</h4>
-                <p>Accomplishments of real value come from many humans working together to achieve greatness.</p>
-            </div>
-            <div class="col-md-3">
-                <h4>Service</h4>
-                <p>Grateful for the lives we’ve been given, we find joy in providing others with the opportunity to experience a reprieve.</p>
-            </div>
+<div id="core-values" class="core-values" style="position: relative; background-image: url('images/cool_chess_board.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div> <!-- Optional overlay -->
+    <div class="container slide-in-left" style="position: relative; z-index: 2;">
+        <h2 style="color: white;">Our Core Values</h2> <!-- Change text color for readability -->
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">Excellence</h4>
+            <p style="color: white;">We are relentless in pursuit of excellence in all we do.</p>
+        </div>
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">Innovation</h4>
+            <p style="color: white;">Unafraid to challenge the paradigm, we seek new ways to solve old problems.</p>
+        </div>
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">Collaboration</h4>
+            <p style="color: white;">Accomplishments of real value come from many humans working together to achieve greatness.</p>
+        </div>
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">Service</h4>
+            <p style="color: white;">Grateful for the lives we’ve been given, we find joy in providing others with the opportunity to experience a reprieve.</p>
         </div>
     </div>
 </div>
 
+
 <!-- Who We Treat -->
 <div id="who-we-treat" class="container slide-in-right">
     <h2>Who We Treat</h2>
+    <p>
+        <a href="https://downloads.asam.org/sitefinity-production-blobs/images/default-source/asam_criteria/continuum-of-care-8.1.png?sfvrsn=faac7ea6_1" target="_blank">Clinically Managed Low Intensity Residential</a> services at The Reprieve are appropriate for individuals diagnosed with a substance use and/or co-occurring disorder, who are capable of self-care but don’t have a stable home environment or are not ready to return to family or independent living.
+    </p>
     <p>18+ Males</p>
-    <p>Clinically-managed low intensity residential services at The Reprieve are appropriate for individuals diagnosed with a substance use and/or co-occurring disorder, who are capable of self-care but don’t have a stable home environment or are not ready to return to family or independent living.</p>
 </div>
 
 <!-- How We Treat -->
 <div id="how-we-treat" class="treatment bg-light">
     <div class="container">
         <h2>How We Treat</h2>
-        <p>Our patient-centric approach to care is designed to meet patient needs holistically. Positive outcomes depend on the complex interrelationship of a patient’s physical, psychosocial, spiritual, and socioeconomic status. The strength of our program lies in the balance we create between individualized treatment, a supportive peer-based community, and connection to services accessible in the community.</p>
-        <p>Our elective-style program curriculum incorporates a range of therapies to meet individual recovery needs and offers scheduling flexibility for those who are employed or enrolled in school. The Reprieve group program may include, but is not limited to, the following:</p>
+        <p>Our patient-centric approach to care is designed to meet patient needs holistically. Positive outcomes depend on the complex interrelationship of a patient’s physical, psychosocial, spiritual, and socioeconomic status. The strength of our program lies in the balance we create between individualized treatment, a supportive peer-based community, and the connection to services accessible in the community.</p>
+        <h3>What This Looks Like</h3>
         <ul class="list-style-alpha" style="list-style-type: lower-alpha;">
             <li>Upon enrollment, each resident receives a comprehensive assessment that includes a meeting with a therapist, a Certified Recovery Support Specialist and, if indicated, can include additional members of our health and wellness team.</li>
             <li>Using our comprehensive assessment as a road map of needs, our treatment team works collaboratively with the resident to develop and individualized treatment plan that includes a minimum of five (5) hours of clinically-managed treatment per week directed toward preventing relapse, applying recovery skills, and reintegrating into the community. Residents may also participate in individual therapy and peer support services as necessary.</li>
             <li>Our treatment services are uniquely designed to help our residents establish a balanced and self-sustaining life with a complete toolkit for independence.</li>
         </ul>
+    </div>
+</div>
+
+<!--Clinically Managed Treatment Program-->
+<div id="clinically-managed" class="treatment">
+    <div class="container">
+        <h2>Clinically Managed Treatment Program</h2>
         <h4>Daily Reflection</h4>
         <p>This group meets each morning and creates accountability for residents who have not yet secured employment and/or struggle with a morning routine. The intention is for residents to start the day on the right foot. Our facilitator checks in with residents to set goals and intentions for the day.</p>
         <h4>Early Recovery</h4>
@@ -210,23 +223,39 @@
     </div>
 </div>
 
+<!--Intake Form-->
+<div>
+    <div class="container treatement">
+        <h2>Intake Process</h2>
+        <ol>
+            <li>Contact our intake department at (443) 777-0925, provide basic demographic information and complete a brief assesment.</li>
+            <li>Our team will complete an insurance benefits and eligibility verification.</li>
+            <li> Clinically appropriate residents will be scheduled for admission at the earliest available date. If necessary, our treatement team willprovide a referral to an alternative provider for care.</li>
+        </ol>
+    </div>
+</div>
+
 <!-- Contact Us -->
 <div id="contact" class="contact">
     <div class="container">
-        <p>For any inquiries, admissions, or referrals, please call us at (877) 400-0925 or complete the form below; our team is available 24/7 for residents and patients. General inquiries are serviced Mon-Fri 9am-5pm.</p>
-        <h2>Contact Us</h2>
+        <h2>Contact Our Team</h2>
+        <p>A member of our team is available 24/7. Call (443) 777-0925 to make a referral or inquire about admission to The Repreive.</p>
         <form id="contactForm">
             <div class="form-group">
                 <label for="userType">Type of Inquiry:</label>
                 <select class="form-control" id="userType" required>
                     <option value="">Select...</option>
-                    <option value="General">General</option>
-                    <option value="Resident">Resident</option>
-                    <option value="Professional">Professional</option>
+                    <option value="General">General Information</option>
+                    <option value="Resident">Resident Intake</option>
+                    <option value="Professional">Provider Referral</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="first-name">First Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
                 <input type="text" class="form-control" id="name" required>
             </div>
             <div class="form-group">
@@ -251,7 +280,7 @@
 <!-- Location Section -->
 <div id="location" class="location bg-light" style="padding-top: 50px;">
     <div class="container">
-        <h2>Our Location</h2>
+        <h2>Service Location</h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="d-flex flex-column justify-content-center h-100" style="margin-bottom: 30px">
