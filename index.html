@@ -8,9 +8,25 @@
     <link rel="icon" href="images/The Reprieve Logo Pack FINAL_LEAF WHITE ON BLUE.png" type="image/x-icon">
     <style>
         .navbar-brand img {
-            max-height: 50px; /* Adjust the height as needed */
-            height: auto;
-            width: auto;
+            max-height: 80px; /* Increase the logo height */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-height: 60px; /* Slightly smaller on mobile screens for better layout */
+            }
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem; /* Increase font size of nav links */
+            font-weight: bold; /* Make the links bolder for visibility */
+            padding: 15px 20px; /* Add more padding for a larger clickable area */
+        }
+
+        .navbar-toggler {
+            font-size: 1.5rem; /* Increase the font size of the hamburger icon */
         }
         button{
             background-color: #244c58;
@@ -67,16 +83,219 @@
         } */
         html, body{
             overflow-x: hidden;
-        }
-        .contact p{
-            text-align: center;
-        
-        }
-        .contact h2{
-            text-align: center;
+            font-size: 110%; /* Increase font size by 10% */
         }
         .location{
             background-color:#244c58
+        }
+        .cta-banner {
+            background-color: #244c58; /* Primary color background */
+            padding: 30px 0; /* Adjust padding to create a balance */
+            margin-top: 0; /* Remove any margin at the top */
+            color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+        }
+        .cta-text {
+            font-size: 2.5rem; /* Larger, impactful text */
+            color: white; /* White for high contrast */
+            font-weight: bold;
+            text-transform: uppercase; /* Make the text stand out even more */
+            margin-bottom: 20px;
+            letter-spacing: 1px; /* Slight spacing for readability */
+            width: 100%; /* Full width */
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 50px; /* Larger padding for a prominent button */
+            background-color: white; /* White button for contrast */
+            color: #244c58; /* Primary color text for the button */
+            font-size: 1.5rem; /* Larger button text */
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px; /* Rounded button for a modern look */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #1b3b45; /* Darker hover effect */
+            transform: translateY(-3px); /* Lift effect on hover */
+        }
+
+        /* Ensuring the text and button span the full width on smaller screens */
+        @media (max-width: 768px) {
+            .cta-text {
+                font-size: 2rem; /* Responsive text size for smaller screens */
+            }
+
+            .cta-btn {
+                width: 100%; /* Full-width button on smaller screens */
+                padding: 15px 0; /* Adjust padding for full-width button */
+            }
+        }
+
+        /* Styling the Contact Section */
+        #contact {
+            background-color: #f0f0f0; /* Light grey background to differentiate section */
+            padding: 60px 0; /* Ample padding to make it feel grand */
+        }
+
+        #contact h2 {
+            font-size: 2.5rem; /* Large, bold heading */
+            color: #244c58; /* Primary color */
+            font-weight: bold;
+            text-transform: uppercase; /* Capitalized for emphasis */
+            margin-bottom: 20px;
+            letter-spacing: 1px; /* Slight letter spacing for an elegant look */
+            text-align: center; /* Center the heading for prominence */
+        }
+
+        #contact p {
+            font-size: 1.8rem; /* Large paragraph text */
+            color: #444; /* Dark grey text for readability */
+            margin-bottom: 30px; /* Add spacing below the paragraph */
+            font-weight: 500; /* Make the text weight slightly bolder */
+            line-height: 1.5; /* Improve readability */
+            text-align: center; /* Center the paragraph */
+        }
+
+        #contactForm {
+            max-width: 700px; /* Constrain the form's width for better readability */
+            margin: 0 auto; /* Center the form */
+            padding-top: 20px;
+        }
+
+        #contactForm .form-group label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #244c58;
+        }
+
+        #contactForm .form-control {
+            font-size: 1rem; /* Standardize the font size for inputs */
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        #contactForm .btn-lg {
+            background-color: #244c58;
+            color: white;
+            font-size: 1.5rem; /* Larger button text */
+            padding: 12px 50px; /* Larger button for prominence */
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #contactForm .btn-lg:hover {
+            background-color: #1b3b45; /* Darker shade on hover */
+            transform: translateY(-3px); /* Subtle lift effect on hover */
+        }
+        /* Fix for select text cutoff */
+        #contactForm select.form-control {
+            font-size: 1rem; /* Adjust font size for better fit */
+            height: auto; /* Let height adjust automatically to content */
+            padding: 10px 15px; /* Adjust padding for a balanced look */
+            line-height: 1.5; /* Ensure proper line height for readability */
+            -webkit-appearance: none; /* Ensure uniform look across browsers */
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #fff; /* Ensure select background color remains white */
+            border: 1px solid #ccc; /* Keep the border subtle */
+            border-radius: 8px; /* Consistent styling with other inputs */
+        }
+
+        #contactForm select.form-control:focus {
+            border-color: #244c58; /* Change border color to match primary color when focused */
+            box-shadow: 0 0 5px rgba(36, 76, 88, 0.5); /* Add subtle shadow on focus */
+            outline: none; /* Remove default focus outline */
+        }
+        /* Indent and style the section with h4 and p */
+        .treatment-section h4 {
+            margin-left: 20px; /* Indent headers */
+            font-size: 1.5rem; /* Increase header size slightly */
+            font-weight: bold; /* Make the headers stand out */
+            color: #244c58; /* Use the primary color for consistency */
+        }
+
+        .treatment-section p {
+            margin-left: 40px; /* Indent paragraphs more for readability */
+            font-size: 1.1rem; /* Slightly increase paragraph size */
+            line-height: 1.6; /* Improve paragraph spacing */
+            color: #444; /* Dark grey for easy reading */
+        }
+
+        .treatment-section ul {
+            margin-left: 60px; /* Indent the list more than paragraphs */
+            list-style-type: disc; /* Add bullet points */
+        }
+
+        .treatment-section ul li {
+            margin-bottom: 10px; /* Add spacing between list items */
+        }
+        /* Treatment Section (Main Section Headers) */
+        .treatment h2 {
+            font-size: 2.2rem; /* Larger for main section headers */
+            font-weight: bold;
+            color: #244c58; /* Primary color */
+            text-transform: uppercase; /* Capitalized for emphasis */
+            margin-bottom: 20px;
+        }
+
+        .treatment h3 {
+            font-size: 1.8rem; /* Slightly smaller than h2 */
+            font-weight: bold;
+            color: #244c58; /* Keep primary color for consistency */
+            margin-bottom: 15px;
+        }
+
+        /* Treatment-Section (Subsection Headers) */
+        .treatment-section h4 {
+            font-size: 1.5rem; /* Slightly smaller for subsection headers */
+            font-weight: bold;
+            color: #1b3b45; /* Slightly darker shade of the primary color */
+            margin-left: 20px; /* Indentation for sub-sections */
+            margin-bottom: 10px; /* Smaller margin to separate from content */
+            text-transform: capitalize; /* Use capitalization for these headers */
+        }
+
+        .treatment-section p {
+            margin-left: 40px; /* Ensure paragraphs are indented further */
+            font-size: 1.1rem; /* Normal paragraph size */
+            line-height: 1.6;
+            color: #444; /* Subtle grey for readability */
+        }
+        /* Floating Call Us Button */
+        .floating-call-btn {
+            position: fixed; /* Keeps the button fixed as the user scrolls */
+            bottom: 20px; /* 20px from the bottom of the screen */
+            right: 20px; /* 20px from the right side of the screen */
+            background-color: #244c58; /* Primary color for the button */
+            color: white; /* White text for contrast */
+            font-size: 1.2rem; /* Slightly larger font size */
+            font-weight: bold; /* Bold text */
+            padding: 15px 30px; /* Add padding for a button feel */
+            border-radius: 50px; /* Rounded edges for modern design */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            text-decoration: none; /* Remove underline */
+            z-index: 1000; /* Ensure it stays on top of other elements */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .floating-call-btn:hover {
+            background-color: #1b3b45; /* Darken the button on hover */
+            transform: translateY(-3px); /* Slight lift effect on hover */
+        }
+
+        /* Responsive adjustment for smaller screens */
+        @media (max-width: 768px) {
+            .floating-call-btn {
+                font-size: 1rem; /* Slightly smaller font size for mobile */
+                padding: 12px 20px; /* Reduce padding for mobile view */
+            }
         }
     </style>
 </head>
@@ -93,10 +312,24 @@
             <li class="nav-item"><a class="nav-link" href="#who-we-are">What We Do</a></li>
             <li class="nav-item"><a class="nav-link" href="#who-we-treat">Who We Treat</a></li>
             <li class="nav-item"><a class="nav-link" href="#how-we-treat">How We Treat</a></li>
+            <li class="nav-item"><a class="nav-link" href="#clinically-managed">Treatment Program</a></li>
+            <li class="nav-item"><a class="nav-link" href="#intake">Intake Process</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
         </ul>
     </div>
 </nav>
+
+<!-- Call to Action Banner -->
+<div class="cta-banner text-center">
+    <div class="container">
+        <p class="cta-text">Need Immediate Assistance? Call Us Now!</p>
+        <a href="tel:+14437770925" class="cta-btn">Call (443) 777-0925</a>
+    </div>
+</div>
+
+<a href="tel:+14437770925" class="floating-call-btn">
+    Call Us Now
+</a>
 
 <!-- Hero Section -->
 <div class="hero text-center slide-in-left" style="position: relative; background-image: url('images/dope_flowers.jpg'); background-size: cover;">
@@ -125,7 +358,7 @@
 </div>
 
 <!-- Core Values -->
-<div id="core-values" class="core-values" style="position: relative; background-image: url('images/cool_chess_board.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
+<div id="core-values" class="core-values" style="position: relative; background-image: url('images/dope_flowers_2.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div> <!-- Optional overlay -->
     <div class="container slide-in-left" style="position: relative; z-index: 2;">
         <h2 style="color: white;">Our Core Values</h2> <!-- Change text color for readability -->
@@ -176,57 +409,78 @@
 <div id="clinically-managed" class="treatment">
     <div class="container">
         <h2>Clinically Managed Treatment Program</h2>
-        <h4>Daily Reflection</h4>
-        <p>This group meets each morning and creates accountability for residents who have not yet secured employment and/or struggle with a morning routine. The intention is for residents to start the day on the right foot. Our facilitator checks in with residents to set goals and intentions for the day.</p>
-        <h4>Early Recovery</h4>
-        <p>Appropriate for residents new to The Reprieve, this process-oriented group facilitates discussion around current issues pertaining to substance independence as well as relapse prevention.</p>
-        <h4>Sustained Recovery</h4>
-        <p>Appropriate for residents that have successfully integrated into the therapeutic community and have demonstrated a commitment to perpetual progress toward self-sustainability. This process-oriented group facilitates discussion around current issues pertaining to substance independence as well as relapse prevention.</p>
-        <h4>Dialectical Behavior Therapy (DBT)</h4>
-        <p>Dialectical Behavior Therapy is an evidence-based, cognitive behavioral treatment. This group uses a step-by-step format to teach four sets of skills: mindfulness, interpersonal effectiveness, emotion regulation and distress tolerance.</p>
-        <h4>Men’s Process Group</h4>
-        <p>Our single gender process groups provide residents with an opportunity to safely discuss, explore and process issues directly related to men’s socio-emotional needs and health-related issues.</p>
-        <h4>Family Systems</h4>
-        <p>This group offers psychoeducation on family dynamics as well as a space to process these dynamics as they arise in the resident’s family and within the therapeutic community. Roles within the family/therapeutic community and how residents relate to family/community members are discussed while also taking a look at how that impacts relationships outside of the household. Larger systems such where residents go to school, work, play and worship are discussed as well. Residents have the opportunity to ask for support, validation, or skills as they relate to the subject of discussion.</p>
-        <h4>Intro to Codependency (CoDA)</h4>
-        <p>This group addresses issues of codependency and how codependent behaviors can impact our ability to form and maintain healthy relationships. Based off of the 12-step program Codependents Anonymous, our CoDA group integrates 12-step concepts with relevant process-based discussions.</p>
-        <h4>Social Skills</h4>
-        <p>Social Skills Group is a process, experiential and psycho educational group. Social interaction skills and interpersonal dynamics are explored. Role playing, verbal and non-verbal forms of communication, managing social anxiety, developing healthy relationships and boundaries are routinely discussed and rehearsed.</p>
-        <h4>Executive Function & Life Skills</h4>
-        <p>Executive Function refers to the ability to manage or regulate a collection of basic cognitive and emotional processes. This group focuses on developing the skills needed to effectively plan, initiate, organize and execute tasks as well as the ability to cope with transitions or regulate emotional responses. Group members create specific weekly task-oriented goals and work closely with staff on the necessary steps to incorporate these new skills into daily life.</p>
-        <h4>Relapse Prevention Group</h4>
-        <p>Relapse Prevention Group is both a process group and a psycho-educational group. The group discusses current issues pertaining to substance independence as well as relapse prevention planning and skills. Triggers, high risk situations, people and things are outlined and coping skills are developed, honed and practiced in a supportive environment.</p>
-        <h4>The Reprieve Experience</h4>
-        <p>The Reprieve Experience is geared towards new clients, individuals who are in their first 2-4 weeks of treatment. This group is an excellent way for clients to get to know each other and build a sense of camaraderie. Certified Peer Recovery Specialists help residents learn the “ins and outs” of the program including the daily schedule, personal responsibility, community activities, group therapy opportunities, and more, and to generally acclimate to life at The Reprieve in a supportive social environment.</p>
-        <h4>Weekend Programming</h4>
-        <p>Weekend programming helps residents connect with their peers on the weekends, which can be especially challenging for some clients navigating recovery. Weekend activities often include field trips such as going to a farmer’s market, the movies, local community events, or working together at the residence to make a family-style meal or even seasonal activities like pumpkin carving.</p>
-        <h4>Unit Accountability</h4>
-        <p>This mandatory unit meeting offers opportunities for residents to understand and discuss issues and reinforce a recovery-oriented culture. Typically, a variety of individual, interpersonal, and house issues are presented. Residents are responsible for positive conflict resolution and house governance using personal recovery experience as a way to help others, emphasizing recovery as an interaction between the individual and their environment.</p>
-        <h4>Community Accountability</h4>
-        <p>This mandatory community meeting offers opportunities for residents to understand and discuss issues and reinforce a recovery-oriented culture. Typically, a variety of individual, interpersonal, and house issues are presented. Residents are responsible for positive conflict resolution and house governance using personal recovery experience as a way to help others, emphasizing recovery as an interaction between the individual and their environment.</p>
-        <h4>The Family Collective</h4>
-        <p>The Family Collective is a virtual, biweekly multifamily group exclusively for The Reprieve family members to connect and learn with the support and facilitation of licensed clinicians. The psycho-educational group provides a safe space to learn about best practices that help residents successfully transition from treatment to thrive at home. It offers time for group discussion overseen and supported by licensed clinicians, and covers a new theme each week.</p>
-        <p>Topics may include:</p>
-        <ul>
-            <li>“The Art of Communication”</li>
-            <li>“Setting and Reinforcing Boundaries”</li>
-            <li>“Maintaining Independence after Co-Dependence”</li>
-        </ul>
-        <h4>Individual Counseling</h4>
+        <h3>Individual Counseling</h3>
         <p>Through focused individualized therapy with licensed professionals, residents work on critical skills including relapse prevention, social skills, distress tolerance and mindfulness to prepare for navigating life outside of treatment.</p>
-        
-        <h4>Peer Support Services</h4>
+        <h3>Group Therapy</h3>
+        <p>Our elective-style group program curriculum incorporates a range of therapies to meet individual recovery needs and offers scheduling flexibility for those who are employed or enrolled in school. The Reprieve program may include, but is not limited to, the following:</p>
+        <!--Indent these beneath group therapy-->
+        <div class="treatment-section">
+            <h4>Daily Reflection</h4>
+            <p>This group meets each morning and creates accountability for residents who have not yet secured employment and/or struggle with a morning routine. The intention is for residents to start the day on the right foot. Our facilitator checks in with residents to set goals and intentions for the day.</p>
+
+            <h4>Early Recovery</h4>
+            <p>Appropriate for residents new to The Reprieve, this process-oriented group facilitates discussion around current issues pertaining to substance independence as well as relapse prevention.</p>
+
+            <h4>Sustained Recovery</h4>
+            <p>Appropriate for residents that have successfully integrated into the therapeutic community and have demonstrated a commitment to perpetual progress toward self-sustainability. This process-oriented group facilitates discussion around current issues pertaining to substance independence as well as relapse prevention.</p>
+
+            <h4>Dialectical Behavior Therapy (DBT)</h4>
+            <p>Dialectical Behavior Therapy is an evidence-based, cognitive behavioral treatment. This group uses a step-by-step format to teach four sets of skills: mindfulness, interpersonal effectiveness, emotion regulation and distress tolerance.</p>
+
+            <h4>Men’s Process Group</h4>
+            <p>Our single gender process groups provide residents with an opportunity to safely discuss, explore and process issues directly related to men’s socio-emotional needs and health-related issues.</p>
+
+            <h4>Family Systems</h4>
+            <p>This group offers psychoeducation on family dynamics as well as a space to process these dynamics as they arise in the resident’s family and within the therapeutic community. Roles within the family/therapeutic community and how residents relate to family/community members are discussed while also taking a look at how that impacts relationships outside of the household. Larger systems such where residents go to school, work, play and worship are discussed as well. Residents have the opportunity to ask for support, validation, or skills as they relate to the subject of discussion.</p>
+
+            <h4>Intro to Codependency (CoDA)</h4>
+            <p>This group addresses issues of codependency and how codependent behaviors can impact our ability to form and maintain healthy relationships. Based off of the 12-step program Codependents Anonymous, our CoDA group integrates 12-step concepts with relevant process-based discussions.</p>
+
+            <h4>Social Skills</h4>
+            <p>Social Skills Group is a process, experiential and psycho educational group. Social interaction skills and interpersonal dynamics are explored. Role playing, verbal and non-verbal forms of communication, managing social anxiety, developing healthy relationships and boundaries are routinely discussed and rehearsed.</p>
+
+            <h4>Executive Function & Life Skills</h4>
+            <p>Executive Function refers to the ability to manage or regulate a collection of basic cognitive and emotional processes. This group focuses on developing the skills needed to effectively plan, initiate, organize and execute tasks as well as the ability to cope with transitions or regulate emotional responses. Group members create specific weekly task-oriented goals and work closely with staff on the necessary steps to incorporate these new skills into daily life.</p>
+
+            <h4>Relapse Prevention Group</h4>
+            <p>Relapse Prevention Group is both a process group and a psycho-educational group. The group discusses current issues pertaining to substance independence as well as relapse prevention planning and skills. Triggers, high risk situations, people and things are outlined and coping skills are developed, honed and practiced in a supportive environment.</p>
+
+            <h4>The Reprieve Experience</h4>
+            <p>The Reprieve Experience is geared towards new clients, individuals who are in their first 2-4 weeks of treatment. This group is an excellent way for clients to get to know each other and build a sense of camaraderie. Certified Peer Recovery Specialists help residents learn the “ins and outs” of the program including the daily schedule, personal responsibility, community activities, group therapy opportunities, and more, and to generally acclimate to life at The Reprieve in a supportive social environment.</p>
+
+            <h4>Weekend Programming</h4>
+            <p>Weekend programming helps residents connect with their peers on the weekends, which can be especially challenging for some clients navigating recovery. Weekend activities often include field trips such as going to a farmer’s market, the movies, local community events, or working together at the residence to make a family-style meal or even seasonal activities like pumpkin carving.</p>
+
+            <h4>Unit Accountability</h4>
+            <p>This mandatory unit meeting offers opportunities for residents to understand and discuss issues and reinforce a recovery-oriented culture. Typically, a variety of individual, interpersonal, and house issues are presented. Residents are responsible for positive conflict resolution and house governance using personal recovery experience as a way to help others, emphasizing recovery as an interaction between the individual and their environment.</p>
+
+            <h4>Community Accountability</h4>
+            <p>This mandatory community meeting offers opportunities for residents to understand and discuss issues and reinforce a recovery-oriented culture. Typically, a variety of individual, interpersonal, and house issues are presented. Residents are responsible for positive conflict resolution and house governance using personal recovery experience as a way to help others, emphasizing recovery as an interaction between the individual and their environment.</p>
+
+            <h4>The Family Collective</h4>
+            <p>The Family Collective is a virtual, biweekly multifamily group exclusively for The Reprieve family members to connect and learn with the support and facilitation of licensed clinicians. The psycho-educational group provides a safe space to learn about best practices that help residents successfully transition from treatment to thrive at home. It offers time for group discussion overseen and supported by licensed clinicians, and covers a new theme each week.</p>
+
+            <p>Topics may include:</p>
+            <ul>
+                <li>“The Art of Communication”</li>
+                <li>“Setting and Reinforcing Boundaries”</li>
+                <li>“Maintaining Independence after Co-Dependence”</li>
+            </ul>
+        </div>
+        <!--Stop Indenting here-->
+
+        <h3>Peer Support Services</h3>
         <p>Each resident is assigned a Certified Peer Recovery Specialists (CPRS) that is formally trained to leverage their lived experience in recovery to both facilitate support groups and work with residents one-on-one. CPRSs support program participants in achieving their individual treatment plan goals by helping them to access community services available, teaching basic life skills such as bill paying and how to keep appointments, and providing guidance and encouragement along the recovery journey to keep residents engaged and realize their full potential.</p>
         
-        <h4>Outcome Measurement</h4>
+        <h3>Outcome Measurement</h3>
         <p>The Reprieve leverages cutting-edge technology to engage clients while measuring outcomes utilizing the Recovery Capital Index (RCI), a person-centered and scientifically validated tool to reliably measure addiction wellness regardless of treatment modality, recovery pathway, or substance of use. The RCI is a holistic tool for a complex condition which provides a multidimensional measure of wellbeing. Care across multiple providers treating an individual can be personalized and success can be reinforced.</p>
     </div>
 </div>
 
 <!--Intake Form-->
 <div>
-    <div class="container treatment">
-        <h2>Intake Process</h2>
+    <div class="container treatment" id="intake">
+         <h2>Intake Process</h2>
         <ol>
             <li>Contact our intake department at (443) 777-0925, provide basic demographic information and complete a brief assessment.</li>
             <li>Our team will complete an insurance benefits and eligibility verification.</li>
@@ -235,7 +489,7 @@
     </div>
 </div>
 
-<!-- Contact Us -->
+<!-- Contact Us Make this larger-->
 <div id="contact" class="contact">
     <div class="container">
         <h2>Contact Our Team</h2>
